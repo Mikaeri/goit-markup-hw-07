@@ -502,6 +502,17 @@ body {
 	background-position:center;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image:
+	linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
+	url(../image/main/bg@2x.jpg);
+  }
+}
+
 @media screen and (min-width:768px) {
 	.hero{
 		padding-top: 188px;
@@ -1225,7 +1236,7 @@ body {
 	opacity: 1;
 	padding: 72px 24px 24px;
 
-	width: 408px;
+	width: 392px;
 
 	background-color: var(--modal-window);
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -1274,14 +1285,24 @@ body {
 .modal-form-appeal {
 	display: block;
 	text-align: center;
-	margin-bottom: 14px;
+	margin-bottom: 16px;
 
 	font-weight: 500;
 	line-height: 1.5;
 
 	color: var(--dark-color);
 }
+@media screen and (max-width:768px){
+	.modal{
+		width: 392px;
+	}
+}
 
+@media screen and (max-width:1188px) {
+	.modal-form-appeal {
+		margin-bottom: 14px;
+	}
+}
 .modal-label-group {}
 
 
