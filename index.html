@@ -190,18 +190,48 @@
           <h2 class="section-title">What are we doing</h2>
           <ul class="doing-list list">
             <li class="doing-item">
-              <img src="./image/main/pc.jpg" alt="computer" width="360" height="300" />
+              <picture>
+                <source
+                  srcset="./image/main/pc.webp 1x, ./image/main/pc@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./image/main/pc.img 1x, ./image/main/pc@2x.img 2x"
+                  type="image/img"
+                />
+                <img src="./image/main/pc.jpg" alt="computer" width="360" height="300" />
+              </picture>
             </li>
             <li class="doing-item">
-              <img src="./image/main/phone.jpg" alt="phone" width="360" height="300" />
+              <picture>
+                <source
+                  srcset="./image/main/phone.webp 1x, ./image/main/phone@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./image/main/phone.img 1x, ./image/main/phone@2x.img 2x"
+                  type="image/img"
+                />
+                <img src="./image/main/phone.jpg" alt="phone" width="360" height="300" />
+              </picture>
             </li>
             <li class="doing-item">
-              <img
-                src="./image/main/mobile.jpg"
-                alt="phone_and_laptop"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  srcset="./image/main/mobile.webp 1x, ./image/main/mobile@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./image/main/mobile.img 1x, ./image/main/mobile@2x.img 2x"
+                  type="image/img"
+                />
+                <img
+                  src="./image/main/mobile.jpg"
+                  alt="phone_and_laptop"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -215,6 +245,7 @@
             <li class="team-item">
               <img
                 class="team-member"
+                srcset="./image/main/mark.jpg 1x, ./image/main/mark@2x.jpg 2x"
                 src="./image/main/mark.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -256,6 +287,7 @@
             <li class="team-item">
               <img
                 class="team-member"
+                srcset="./image/main/tom.jpg 1x, ./image/main/tom@2x.jpg 2x"
                 src="./image/main/tom.jpg"
                 alt="Tom Ford"
                 width="264"
@@ -297,6 +329,7 @@
             <li class="team-item">
               <img
                 class="team-member"
+                srcset="./image/main/camila.jpg 1x, ./image/main/camila@2x.jpg 2x"
                 src="./image/main/camila.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -338,6 +371,7 @@
             <li class="team-item">
               <img
                 class="team-member"
+                srcset="./image/main/daniel.jpg 1x, ./image/main/daniel@2x.jpg 2x"
                 src="./image/main/daniel.jpg"
                 alt="Daniel Wilson"
                 width="264"
