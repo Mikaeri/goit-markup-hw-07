@@ -75,7 +75,7 @@ body {
 
 @media screen and (min-width:428px){
 	.container{
-		width:396px;
+		width:428px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -83,12 +83,12 @@ body {
 
 @media screen and (min-width:768px) {
 	.container{
-		width: 736px;
+		width: 768px;
 	}
 }
 @media screen and (min-width:1188px) {
 	.container {
-		width: 1158px;
+		width: 1188px;
 		padding-left: 15px;
 		padding-right: 15px;
 	}
@@ -419,6 +419,7 @@ body {
 	
 	fill:var(--light-color);
 }
+/* ====================MOBILE-MENU=================== */
 /* =====================/HEADER====================== */
 
 /* =====================MAIN====================== */
@@ -432,6 +433,12 @@ body {
 	color: var(--dark-color);
 }
 
+.section-head.soft-skill-head{
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.11;
+}	
+
 .section-title {
 	margin-bottom: 72px;
 	text-align: center;
@@ -444,19 +451,32 @@ body {
 }
 
 .section {
-	padding-top: 120px;
-	padding-bottom: 120px;
+	padding-top: 96px;
+	padding-bottom: 96px;
+}
+
+@media screen and (min-width:1188px) {
+	.section-head.soft-skill-head{
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 1.2;
+	}	
+
+	.section {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
 }
 /* =====================/MAIN====================== */
 
 /* =====================HERO====================== */
 .hero {
-	max-width: 1440px;
-	padding-top: 192px;
-	padding-bottom: 192px;
+	max-width: 100vw;
+	padding-top: 112px;
+	padding-bottom: 112px;
 	margin: 0 auto;
 	
-	font-weight: 600;
+	font-weight: 700;
 	
 	background-color: var(--dark-color);
 	background-image:
@@ -467,17 +487,40 @@ body {
 	background-position:center;
 }
 
+@media screen and (min-width:768px) {
+	.hero{
+		padding-top: 188px;
+		padding-bottom: 188px;
+	}
+}
+
+@media screen and (min-width:1188px) {
+	.hero{
+		padding-top: 112px;
+		padding-bottom: 108px;
+	}
+}
+
 .hero-head {
-	width: 492px;
+	width: 318px;
 	margin-bottom: 48px;
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
 
-	font-size: 56px;
-	line-height: 1.07;
+	font-size: 36px;
+	line-height: 1.11;
 
 	color: var(--doc-color);
+}
+
+@media screen and (min-width:768px) {
+	.hero-head{
+		width:494px;
+
+		font-size: 56px;
+		line-height: 1.07;
+	}
 }
 
 .hero-button {
@@ -503,24 +546,6 @@ body {
 /* =====================/HERO====================== */
 
 /* =====================SOFT-SKILLS================ */
-.soft-skills {
-	padding-bottom: 0;
-}
-
-
-.soft-skill-list {
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: calc(-1*var(--main-value));
-	margin-bottom: calc(-1*var(--main-value));
-}
-
-.soft-skill-items {
-	flex-basis: calc(100%/4 - var(--main-value));
-	margin-left: var(--main-value);
-	margin-bottom: var(--main-value);
-}
-
 .soft-skill-container {
 	display: flex;
 	justify-content: center;
@@ -537,23 +562,78 @@ body {
 	height: 64px;
 }
 
+@media screen and (min-width:768px) {
+	.soft-skill-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: calc(-1*var(--main-value));
+	margin-bottom: calc(-1*72px);
+	}
+
+	.soft-skill-items {
+		flex-basis: calc(100%/2 - var(--main-value));
+		margin-left: var(--main-value);
+		margin-bottom: 72px;
+	}
+}
+
+@media screen and (min-width:1188px){
+	.soft-skills {
+		padding-bottom: 0;
+	}
+
+	.soft-skill-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: calc(-1*var(--main-value));
+		margin-bottom: calc(-1*var(--main-value));
+	}
+
+	.soft-skill-items {
+		flex-basis: calc(100%/4 - var(--main-value));
+		margin-left: var(--main-value);
+		margin-bottom: var(--main-value);
+	}
+}
 .soft-skill-text {}
+
+@media screen and (max-width:767px) {
+	.soft-skill-items:not(:last-child){
+		margin-bottom: 72px;
+	}
+
+	.soft-skill-head{
+	text-align: center;
+	}
+}
+
+@media screen and (max-width:1187px) {
+	.soft-skill-container{
+		display:none;
+	}
+}
 /* =====================/SOFT-SKILLS================ */
 
 /* =====================WHAT-WE-DOING================ */
-.doing {}
+
 
 .doing-list {
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: calc(-1*var(--main-value));
-	margin-bottom: calc(-1*var(--main-value));
+	margin-bottom: calc(-1*72px);
 }
 
 .doing-item {
 	flex-basis: calc(100%/3 - var(--main-value));
 	margin-left: var(--main-value);
-	margin-bottom: var(--main-value);
+	margin-bottom: 72px;
+}
+
+@media screen and (max-width:1187px) {
+	.doing {
+		display: none;
+	}
 }
 /* =====================/WHAT-WE-DOING================ */
 
@@ -562,25 +642,69 @@ body {
 	background-color: var(--light-color);
 }
 
-.team-list {
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: calc(-1*var(--main-value));
-	margin-bottom: calc(-1*var(--main-value));
+@media screen and (max-width:767px) {
+	.team{
+		padding-bottom: 128px;
+	}
+
+	.team-item{
+		max-width: 260px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.team-item:not(:last-child){
+		margin-bottom: 72px;
+	}
 }
-
-.team-item {
-	flex-basis: calc(100%/4 - var(--main-value));
-	margin-left: var(--main-value);
-	margin-bottom: var(--main-value);
-	padding-bottom: 32px;
-
+.team-item{
 	background-color: var(--doc-color);
 	box-shadow:
 		0px 1px 6px rgba(46, 47, 66, 0.08),
 		0px 1px 1px rgba(46, 47, 66, 0.16),
 		0px 2px 1px rgba(46, 47, 66, 0.08);
 	border-radius: 0px 0px 4px 4px;
+	padding-bottom: 32px;
+}
+
+@media screen and (min-width:768px) {
+	.team{
+		padding-bottom: 104px;
+	}
+
+	.team-list {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-left: calc(-1*var(--main-value));
+		margin-bottom: calc(-1*64px);
+	}
+
+	.team-item {
+		flex-basis: calc(100%/2 - var(--main-value));
+		margin-left: var(--main-value);
+		margin-bottom: 64px;
+		max-width: 264px;
+	}
+}
+
+@media screen and (min-width:1188px){
+	.team{
+		padding-bottom: 120px;
+	}
+
+	.team-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: calc(-1*var(--main-value));
+		margin-bottom: calc(-1*var(--main-value));
+	}
+
+	.team-item {
+		flex-basis: calc(100%/4 - var(--main-value));
+		margin-left: var(--main-value);
+		margin-bottom: var(--main-value);
+	} 
 }
 
 .team-member {
@@ -590,7 +714,6 @@ body {
 .team-item>.section-head {
 	text-align: center;
 }
-
 
 .team-position {
 	text-align: center;
@@ -639,15 +762,20 @@ body {
 
 .customers {}
 
-.customer-list {
+/* .customer-list {
 	display: flex;
 	gap:24px;
 	justify-content: center;
 	align-items: center;
+} */
+.customer-list{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .customer-item{
-	width: 168px;
+	width: 190px;
 	height: 88px;
 }
 
