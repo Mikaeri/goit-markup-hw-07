@@ -1119,11 +1119,19 @@ body {
 .filter-list {
 	display: flex;
 	justify-content: center;
+	gap:var(--main-value);
 	margin-bottom: 72px;
 }
 
-.filter-item:not(:first-child) {
-	margin-left: var(--main-value);
+@media screen and (max-width:727px){
+	.filter-list{
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.filter-item:not(:first-child) {
+		margin-left: 0;
+	}
 }
 
 .filter-buttons {
@@ -1153,7 +1161,9 @@ body {
 /* =====================/FILTER========================== */
 
 /* =====================WORKS============================ */
-.work-list {
+
+
+/* .work-list {
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: calc(-1*var(--main-value));
@@ -1166,8 +1176,39 @@ body {
 	flex-basis: calc(100%/3 - var(--main-value));
 	margin-left: var(--main-value);
 	margin-bottom: var(--main-value);
+} */
+
+.work-list {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	row-gap: 48px;
+}
+.work-item {
+	position: relative;
 }
 
+@media screen and (min-width:768px) {
+.work-list {
+	flex-direction: row;
+	row-gap: 72px;
+	column-gap: 24px;
+}
+
+.work-item {
+	flex-basis: calc(100% / 2 - 24px);
+}
+}
+
+@media screen and (min-width:1200px) {
+.work-list {
+	row-gap: 48px;
+}
+
+.work-item {
+	flex-basis: calc(100% / 3 - 48px);
+}
+}
 .work-link {
 	display: block;
 
